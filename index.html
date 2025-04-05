@@ -2,42 +2,154 @@
 <html lang="bn">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Darul Iman Noorani Academy</title>
   <style>
-    body { font-family: sans-serif; background-color: #f0f8ff; margin: 0; padding: 0; }
-    header { background-color: #024; color: white; padding: 20px; text-align: center; }
-    nav a { margin: 10px; color: white; text-decoration: none; }
-    section { padding: 20px; }
-    footer { background-color: #024; color: white; text-align: center; padding: 10px; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Siyam Rupali', sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #1e8449, #2ecc71);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header h1 {
+      font-size: 28px;
+    }
+    header small {
+      display: block;
+      font-size: 18px;
+      margin-top: 5px;
+    }
+    nav {
+      background-color: #145a32;
+      text-align: center;
+    }
+    nav a {
+      display: inline-block;
+      color: white;
+      padding: 12px 18px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #117a39;
+    }
+    section {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    h3 {
+      color: #1e8449;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #d5f5e3;
+      padding-bottom: 5px;
+    }
+    p {
+      line-height: 1.7;
+      font-size: 16px;
+    }
+    a {
+      color: #1e8449;
+    }
+    footer {
+      background-color: #145a32;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        border-bottom: 1px solid #117a39;
+      }
+      section {
+        margin: 10px;
+      }
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Darul Iman Noorani Academy</h1>
-  <p>দ্বীনি ও জেনারেল শিক্ষার সমন্বিত প্রতিষ্ঠান</p>
-  <nav>
-    <a href="#">হোম</a>
-    <a href="#">ভর্তি বিজ্ঞপ্তি</a>
-    <a href="#">আমাদের সম্পর্কে</a>
-    <a href="#">রেজাল্ট</a>
-    <a href="#">যোগাযোগ</a>
-  </nav>
+  <h1>দারুল ঈমান নূরানী একাডেমী</h1>
+  <small>Darul Iman Noorani Academy</small>
 </header>
 
-<section>
-  <h2>আমাদের সম্পর্কে</h2>
-  <p>Darul Iman Noorani Academy একটি খালের দ্বীনি প্রতিষ্ঠান। প্লে থেকে তৃতীয় শ্রেণি পর্যন্ত ইসলামী ও জেনারেল শিক্ষা সমন্বয়ে পরিচালিত।</p>
+<nav>
+  <a href="#home">হোম</a>
+  <a href="#admission">ভর্তি বিজ্ঞপ্তি</a>
+  <a href="#features">আমাদের বৈশিষ্ট্য</a>
+  <a href="#result">রেজাল্ট</a>
+  <a href="#contact">যোগাযোগ</a>
+  <a href="#about">আমাদের সম্পর্কে</a>
+</nav>
+
+<section id="home">
+  <h3>হোম</h3>
+  <p>স্বাগতম! আপনি দারুল ঈমান নূরানী একাডেমীর অফিসিয়াল পেজে আছেন।</p>
 </section>
 
-<section>
-  <h2>ভর্তি চলছে</h2>
-  <p>নতুন শিক্ষাবর্ষের জন্য ভর্তি চলছে। প্লে, নার্সারি, প্রথম শ্রেণি থেকে তৃতীয় শ্রেণি পর্যন্ত।</p>
+<section id="admission">
+  <h3>ভর্তি বিজ্ঞপ্তি</h3>
+  <p>
+    দারুল ঈমান নূরানী একাডেমীতে নতুন শিক্ষাবর্ষের ভর্তি শুরু হয়েছে।<br/>
+    <strong>ভর্তি চলবে: ১ এপ্রিল থেকে ৩০ এপ্রিল পর্যন্ত।</strong><br/>
+    আগ্রহী অভিভাবকদের নির্ধারিত সময়ের মধ্যে যোগাযোগ করার জন্য অনুরোধ করা হচ্ছে।
+  </p>
+</section>
+
+<section id="features">
+  <h3>আমাদের বৈশিষ্ট্য</h3>
+  <p>
+    দারুল ঈমান নূরানী একাডেমী একটি খালেস দ্বীনি প্রতিষ্ঠান।<br/>
+    ক্লাসের পড়া ক্লাসেই বুঝিয়ে নেওয়া হয়, পরবর্তীতে প্রাইভেট পড়াতে হয় না।<br/>
+    ইসলামী শিক্ষার পাশাপাশি একজন ছাত্র জেনারেল শিক্ষায় অত্যন্ত পারদর্শী হয়ে ওঠে।<br/>
+    তৃতীয় শ্রেণীর পড়ার পরে স্কুলে সরাসরি ফাইভে ভর্তি হতে পারে।<br/>
+    এবং সর্বোচ্চ আখলাকের অধিকারী হয়।
+  </p>
+</section>
+
+<section id="result">
+  <h3>রেজাল্ট</h3>
+  <p>অতি শীঘ্রই রেজাল্ট প্রকাশ করা হবে।</p>
+</section>
+
+<section id="contact">
+  <h3>যোগাযোগ</h3>
+  <p>
+    ফোন: <a href="tel:+8801618810696">+8801618810696</a><br/>
+    ইমেইল: <a href="mailto:darulimannooraniacademy@gmail.com">darulimannooraniacademy@gmail.com</a><br/>
+    ঠিকানা: দারুল ঈমান নূরানী একাডেমী,<br/>
+    গ্রাম: খলাইঘাট, পোস্ট: রাজপুর,<br/>
+    উপজেলা: লালমনিরহাট সদর, জেলা: লালমনিরহাট।
+  </p>
+</section>
+
+<section id="about">
+  <h3>আমাদের সম্পর্কে</h3>
+  <p>
+    দারুল ঈমান নূরানী একাডেমী একটি খালেস দ্বীনি প্রতিষ্ঠান, যেখানে শিশুদেরকে প্রাথমিক পর্যায় থেকে ইসলামী জ্ঞান, আদর্শ চরিত্র, এবং জেনারেল শিক্ষা একত্রে প্রদান করা হয়।
+  </p>
 </section>
 
 <footer>
-  <p>&copy; 2025 Darul Iman Noorani Academy</p>
+  &copy; ২০২৫ Darul Iman Noorani Academy. সর্বস্বত্ব সংরক্ষিত।
 </footer>
 
 </body>
