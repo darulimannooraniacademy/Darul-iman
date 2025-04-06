@@ -1,201 +1,69 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Darul Iman Noorani Academy</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap">
-  <style>
-    /* সাধারণ স্টাইলিং */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Noto Sans Bengali', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: linear-gradient(135deg, #1e8449, #2ecc71);
-      color: white;
-      padding: 15px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    header img {
-      height: 60px;
-      margin-right: 15px;
-    }
-    header .title {
-      display: flex;
-      align-items: center;
-    }
-    header h1 {
-      font-size: 20px;
-    }
-    .menu-btn {
-      font-size: 28px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      color: white;
-    }
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: -250px;
-      width: 240px;
-      height: 100%;
-      background-color: #145a32;
-      padding-top: 60px;
-      transition: 0.3s;
-      z-index: 1000;
-    }
-    .sidebar a {
-      display: block;
-      color: white;
-      padding: 14px 20px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .sidebar a:hover {
-      background-color: #117a39;
-    }
-    .content {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    section {
-      margin-bottom: 30px;
-      background: white;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    h3 {
-      color: #1e8449;
-      margin-bottom: 10px;
-      border-bottom: 1px solid #d5f5e3;
-      padding-bottom: 5px;
-    }
-    footer {
-      text-align: center;
-      background-color: #145a32;
-      color: white;
-      padding: 15px;
-      margin-top: 40px;
-    }
-    .language-selector {
-      margin-left: auto;
-      margin-right: 20px;
-    }
-    .language-selector select {
-      padding: 5px;
-      font-size: 16px;
-      border-radius: 5px;
-      border: none;
-    }
-    .hidden {
-      display: none;
-    }
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 18px;
-      }
-      header img {
-        height: 40px;
-      }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Darul Imaan Noorani Academy</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<header>
-  <div class="header-left">
-    <img src="images/logo.png" alt="Logo">
-    <h1>দারুল ঈমান নূরানী একাডেমী</h1>
-  </div>
-  <div class="header-right">
-    <div class="language-switcher">
-      <a href="index_bn.html">বাংলা</a> | <a href="index_en.html">English</a>
-    </div>
-    <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
-  </div>
-</header>
   <header>
-    <div class="title">
-      <img src="images/logo.png" alt="Logo">
-      <h1 id="academy-name">দারুল ঈমান নূরানী একাডেমী</h1>
-    </div>
-    <div class="language-selector">
-      <select id="language-switcher" onchange="changeLanguage()">
+    <nav>
+      <div class="logo">
+        <img src="logo.png" alt="Logo" class="logo-img" />
+        <span data-lang="logo">দারুল ঈমান নূরানী একাডেমী</span>
+      </div>
+      <div class="menu-toggle">&#9776;</div>
+      <ul class="nav-links">
+        <li><a href="#home" data-lang="home">হোম</a></li>
+        <li><a href="#admission" data-lang="admission">ভর্তি</a></li>
+        <li><a href="#features" data-lang="features">বৈশিষ্ট্য</a></li>
+        <li><a href="#results" data-lang="results">রেজাল্ট</a></li>
+        <li><a href="#contact" data-lang="contact">যোগাযোগ</a></li>
+        <li><a href="#about" data-lang="about">সম্পর্কে</a></li>
+      </ul>
+      <select id="language-switcher">
         <option value="bn">বাংলা</option>
         <option value="en">English</option>
       </select>
-    </div>
-    <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
+    </nav>
   </header>
 
-  <div class="sidebar" id="sidebar">
-    <a href="#home" data-key="home">হোম</a>
-    <a href="#admission" data-key="admission">ভর্তি</a>
-    <a href="#features" data-key="features">বৈশিষ্ট্য</a>
-    <a href="#result" data-key="result">রেজাল্ট</a>
-    <a href="#contact" data-key="contact">যোগাযোগ</a>
-    <a href="#about" data-key="about">আমাদের সম্পর্কে</a>
-  </div>
-
-  <div class="content">
+  <main>
     <section id="home">
-      <h3 data-key="home">হোম</h3>
-      <p data-key="home-content">স্বাগতম! আপনি দারুল ঈমান নূরানী একাডেমীর অফিসিয়াল পেজে আছেন।</p>
+      <h1 data-lang="home-heading">দারুল ঈমান নূরানী একাডেমিতে আপনাকে স্বাগতম।</h1>
     </section>
 
     <section id="admission">
-      <h3 data-key="admission">ভর্তি বিজ্ঞপ্তি</h3>
-      <p data-key="admission-content">নতুন শিক্ষাবর্ষে ভর্তি চলছে: ১ এপ্রিল - ৩০ এপ্রিল</p>
+      <h2 data-lang="admission-heading">ভর্তি বিজ্ঞপ্তি</h2>
+      <p data-lang="admission-text">এক এপ্রিল থেকে ৩০ এপ্রিল পর্যন্ত ভর্তি চলবে।</p>
     </section>
 
     <section id="features">
-      <h3 data-key="features">আমাদের বৈশিষ্ট্য</h3>
-      <p data-key="features-content">
-        খালেস দ্বীনি শিক্ষা, ক্লাসেই বোঝানো, জেনারেল শিক্ষায় দক্ষতা,<br>
-        তৃতীয় শ্রেণী শেষে সরাসরি পঞ্চম শ্রেণীতে ভর্তি, উত্তম চরিত্র গঠন।
+      <h2 data-lang="features-heading">আমাদের বৈশিষ্ট্য</h2>
+      <p data-lang="features-text">
+        দারুল ঈমান নূরানী একাডেমী একটি খালেস দ্বীনি প্রতিষ্ঠান, ক্লাসের পড়া ক্লাসেই আদায় করা হয় বাড়তি কোন প্রাইভেট পড়ার প্রয়োজন হয় না এবং প্রতিটি তালেবে এলেম ইলমি আমলী এবং আখলাকী হয়।
       </p>
     </section>
 
-    <section id="result">
-      <h3 data-key="result">রেজাল্ট</h3>
-      <p data-key="result-content">অতি শীঘ্রই রেজাল্ট প্রকাশ করা হবে।</p>
+    <section id="results">
+      <h2 data-lang="results-heading">রেজাল্ট</h2>
+      <p data-lang="results-text">অতি শীঘ্রই রেজাল্ট প্রকাশিত হবে।</p>
     </section>
 
     <section id="contact">
-      <h3 data-key="contact">যোগাযোগ</h3>
-      <p data-key="contact-content">
-        ফোন: +8801618810696<br>
-        ইমেইল: darulimannooraniacademy@gmail.com<br>
-        ঠিকানা: খলাইঘাট, রাজপুর, লালমনিরহাট সদর
-      </p>
+      <h2 data-lang="contact-heading">যোগাযোগ</h2>
+      <p>8801618810696<br/>darulimannooraniacademy@gmail.com<br/>খলাইঘাট, রাজপুর, লালমনিরহাট সদর।</p>
     </section>
 
     <section id="about">
-      <h3 data-key="about">আমাদের সম্পর্কে</h3>
-      <p data-key="about-content">
-        প্রাথমিক থেকে ইসলামী জ্ঞান ও জেনারেল শিক্ষা একসাথে শেখানো হয়, আদর্শ চরিত্র গঠনে সহায়তা করা হয়।
+      <h2 data-lang="about-heading">আমাদের সম্পর্কে</h2>
+      <p data-lang="about-text">
+        দারুল ঈমান নূরানী একাডেমী একটি খালেস দ্বীনি শিক্ষা প্রতিষ্ঠান। দ্বীনি শিক্ষার পাশাপাশি জেনারেল লাইনেও একটি বাচ্চাকে দক্ষ করে তোলা হয়। তিন বছর পড়ার পরে একজন বাচ্চা স্কুলে ফাইভে ভর্তি হতে পারে। তাই দেরি না করে আপনার বাচ্চাকে দ্রুত আমাদের প্রতিষ্ঠানে ভর্তি করে দিন।
       </p>
     </section>
-  </div>
+  </main>
 
-  <footer>
-    &copy; ২০২৫ Darul Iman Noorani Academy. সর্বস্বত্ব সংরক্ষিত।
-  </footer>
-
-  <script>
-    const translations = {
-      en: {
-        'academy-name': 'Darul Iman Noorani Academy',
-        'home': 'Home',
-        'home-content': 'Welcome! You are on the official page of0
+  <script src="script.js"></script>
+</body>
+</html>
